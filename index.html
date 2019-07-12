@@ -2,19 +2,19 @@
 
 <html>
     <head>
-        <style> 
+        <style>
         body {
             margin: 0;
             padding: 0;
-            
+
         }
         nav {
             margin: 0;
             background: blue;
             color: aliceblue;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            display: flex; 
-            align-items: center; 
+            display: flex;
+            align-items: center;
         }
         ol {
             display: flex;
@@ -23,24 +23,96 @@
             justify-content: space-around;
             list-style: none;
         }
+
+
+
         .active {
             font-weight: 600;
         }
-    
-        
+
+
+        .form{
+            margin-left: 25%;
+            width: 50%;
+            border: 1px solid #888;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .from ol{
+            width: 100%;
+        }
+        .firstName, .lastName, .department {
+            display: flex;
+
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        label{
+            display: inline-block;
+            width: 80px;
+        }
+
+        .inputField{
+            flex-grow: 1;
+            height: 40px;
+        }
+
+        .actions{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
         </style>
     </head>
-    <body> 
-        <nav> 
+    <body>
+        <nav>
             <h1>Acme Layout</h1>
-            <ol> 
+            <ol>
                 <li class="item active">User</li>
                 <li class="item">Departments</li>
                 <li class="item">Contact</li>
             </ol>
         </nav>
         <main>
-            <h2></h2>
+            <h2>User</h2>
+            <div class="form">
+                <h2>Create A User</h2>
+                <form class='content' action="">
+                    <div class="firstName">
+                        <label for="first">First Name</label>
+                        <input class="inputField" type="text">
+                    </div>
+
+                    <div class="lastName">
+                        <label for="last">Last Name</label>
+                        <input class="inputField" type="text">
+                    </div>
+                    <div class="department">
+                        <label for="last">Department</label>
+                        <input type="text" class="inputField" list="cars" value='Volvo'/>
+                            <datalist id="cars">
+                            <option>Volvo</option>
+                            <option>Saab</option>
+                            <option>Mercedes</option>
+                            <option>Audi</option>
+                            </datalist>
+                    </div>
+
+
+                    <div class="actions">
+                        <input type="submit" value="save">
+                        <input type="reset" value="clear">
+                    </div>
+
+                </form>
+
+            </div>
 
 
         </main>
